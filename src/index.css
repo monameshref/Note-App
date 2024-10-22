@@ -1,13 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Playpen Sans", cursive;
+  color: var(--main-color);
+  background-color: #f8f6f4;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #482d7a 0%, #f8f6f4 100%);
+  border-radius: 100vh;
+}
+::selection {
+  background-color: var(--second-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+:root {
+  --main-color:#482d7a;
+  --second-color:#CBBCE7;
+}
+.bg-main {
+  background-color: var(--main-color);
+}
+.bg-second {
+  background-color: var(--second-color);
+}
+.text-main {
+  color: var(--main-color);
+}
+.fs-sm {
+  font-size: 13px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.btn-hover {
+  background-color: var(--main-color);
+  transition: .3s;
+}
+.btn-hover:hover {
+  background-color: #7754b7;
+}
+.icon-hover {
+  transition: .3s;
+}
+.icon-hover:hover {
+  color: var(--main-color);
+}
+.passBtn {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card-body {
+  height: 180px;
+  overflow: auto;
+}
+form input {
+  height: 45px !important;
+  min-height: 45px !important;
+}
+.form-floating>.form-control:focus~label::after,
+.form-floating>.form-control:not(:placeholder-shown)~label::after {
+  background-color: transparent;
+}
+.form-control:focus {
+  border-color: #b69aeb;
+  box-shadow: 0 0 0 .25rem #CBBCE7;
+}
+form textarea {
+  resize: none;
+}
+nav,
+footer {
+  background-color: #CBBCE7;
+}
+footer img {
+  width: 100px;
+}
+.addNote {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
 }
